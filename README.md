@@ -6,7 +6,7 @@ Ce projet vise à déployer une infrastructure cloud sur Azure à l'aide de Terr
 
 - Un compte Azure
 - [Azure CLI](https://learn.microsoft.com/fr-fr/cli/azure/install-azure-cli) installé
-- [Terraform](https://www.terraform.io/downloads.html) installé
+- [Terraform]
 
 ## Installation
 
@@ -34,14 +34,18 @@ export ARM_CLIENT_ID=<appId>
 export ARM_CLIENT_SECRET=<password>
 export ARM_TENANT_ID=<tenant>
 
-## Utilisation
+### 4.Installation de terraform sur votre machine 
+documentation à suivre : https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli 
 
 ### Déploiement de l'infrastructure
-
+Créer un répertoire pour votre terraform 
+Réupérer les fichier versions.tf, main.tf, sa.tf, vm.tf 
 Pour initialiser Terraform et déployer l'infrastructure définie dans vos fichiers de configuration `.tf`, exécutez :
-
-terraform init
-terraform apply
+1. terraform init
+2. terraform validate
+3. terraform plan 
+4. terraform apply
+5. terraform state list (pour voir les fichiers créés) 
 
 
 ### Destruction de l'infrastructure
